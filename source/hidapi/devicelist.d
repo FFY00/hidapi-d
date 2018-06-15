@@ -9,7 +9,7 @@ class DeviceList : Hid
     ushort vendor_id = 0x0;
     ushort product_id = 0x0;
 
-    /***********************************
+    /**
      * Sets the search queries
      *
      * Params:
@@ -22,7 +22,7 @@ class DeviceList : Hid
         this.product_id = cast(ushort) product_id;
     }
 
-    /***********************************
+    /**
      * Finds matching devices and iterates over them
      *
      * Example:

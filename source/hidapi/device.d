@@ -13,7 +13,7 @@ class Device : Hid
     private uint default_read_size = 64;
     private int ret = 0;
 
-    /***********************************
+    /**
      * Opens the first matching device
      *
      * Params:
@@ -26,7 +26,7 @@ class Device : Hid
         enforce!HidError(handle != null, "Failed to open the device");
     }
 
-    /***********************************
+    /**
      * Opens the first matching device 
      *
      * Params:
@@ -40,7 +40,7 @@ class Device : Hid
         enforce!HidError(handle != null, "Failed to open the device");
     }
 
-    /***********************************
+    /**
      * Opens a specific device
      *
      * Params:
@@ -52,7 +52,7 @@ class Device : Hid
         enforce!HidError(handle != null, "Failed to open the device");
     }
 
-    /***********************************
+    /**
      * Writes to the device 
      *
      * Params:
@@ -64,7 +64,7 @@ class Device : Hid
         hid_write(handle, buf.ptr, size);
     }
 
-    /***********************************
+    /**
      * Reads from the device
      *
      * Returns: Buffer
@@ -74,7 +74,7 @@ class Device : Hid
         return read(default_read_size);
     }
 
-    /***********************************
+    /**
      * Reads from the device
      *
      * Params:
@@ -90,7 +90,7 @@ class Device : Hid
         return buf;
     }
 
-    /***********************************
+    /**
      * Executes a command
      *
      * Sends a buffer to the device
@@ -108,7 +108,7 @@ class Device : Hid
         return read();
     }
 
-    /***********************************
+    /**
      * Executes a command
      *
      * Sends a buffer to the device
@@ -127,7 +127,7 @@ class Device : Hid
         return read(read_size);
     }
 
-    /***********************************
+    /**
      * Enables/Disables non-blocking mode
      *
      * Params:
@@ -139,7 +139,7 @@ class Device : Hid
         enforce!HidError(ret != -1, "Error setting non-blocking mode");
     }
 
-    /***********************************
+    /**
      * Sends a feature report
      *
      * Params:
@@ -152,7 +152,7 @@ class Device : Hid
         enforce!HidError(ret != -1, "Error sending feature report");
     }
 
-    /***********************************
+    /**
      * Reads a feature report
      *
      * Params:
@@ -168,7 +168,7 @@ class Device : Hid
         return buf;
     }
 
-    /***********************************
+    /**
      * Reads the manufacturer string
      *
      * Returns: Manufacturer string
@@ -178,7 +178,7 @@ class Device : Hid
         return getManufacturer(255);
     }
 
-    /***********************************
+    /**
      * Reads the manufacturer string
      *
      * Params:
@@ -194,7 +194,7 @@ class Device : Hid
         return cast(string) buf;
     }
 
-    /***********************************
+    /**
      * Reads the product string
      *
      * Returns: Product string
@@ -204,7 +204,7 @@ class Device : Hid
         return getProduct(255);
     }
 
-    /***********************************
+    /**
      * Reads the product string
      *
      * Params:
@@ -220,7 +220,7 @@ class Device : Hid
         return cast(string) buf;
     }
 
-    /***********************************
+    /**
      * Reads the serial number
      *
      * Returns: Serial number
@@ -230,7 +230,7 @@ class Device : Hid
         return getSerialNumber(255);
     }
 
-    /***********************************
+    /**
      * Reads the serial number
      *
      * Params:
@@ -246,7 +246,7 @@ class Device : Hid
         return cast(string) buf;
     }
 
-    /***********************************
+    /**
      * Reads a indexed string
      *
      * Params:
@@ -259,7 +259,7 @@ class Device : Hid
         return getIndexedString(index, 255);
     }
 
-    /***********************************
+    /**
      * Reads a indexed string
      *
      * Params:
@@ -277,7 +277,7 @@ class Device : Hid
         return cast(string) buf;
     }
 
-    /***********************************
+    /**
      * Gets the timeout
      *
      * Returns: Timeout
@@ -287,7 +287,7 @@ class Device : Hid
         return timeout;
     }
 
-    /***********************************
+    /**
      * Sets the timeout 
      *
      * Params:
@@ -298,7 +298,7 @@ class Device : Hid
         this.timeout = timeout;
     }
 
-    /***********************************
+    /**
      * Gets the default read size
      *
      * Returns: Read size
@@ -308,7 +308,7 @@ class Device : Hid
         return default_read_size;
     }
 
-    /***********************************
+    /**
      * Sets the deafult read size
      *
      * Params:

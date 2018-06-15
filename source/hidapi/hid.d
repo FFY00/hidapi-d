@@ -7,7 +7,7 @@ import std.exception : enforce;
 class Hid
 {
 
-    /***********************************
+    /**
      * Inits the HIDAPI 
      */
     shared static this()
@@ -16,7 +16,7 @@ class Hid
         enforce!HidError(ret != -1, "Failed to init HIDAPI");
     }
 
-    /***********************************
+    /**
      * Exits the HIDAPI
      *
      * This is generating an error so
