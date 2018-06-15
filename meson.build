@@ -20,7 +20,7 @@ exe = executable('test-hidapi-rival310', 'example.d',
 test('hidapi-rival310', exe)
 
 # Generate dub.json
-has_dub_module = true
+has_dub_module = false
 if has_dub_module
 	dub_sources = []
 	foreach path : hidapid_sources
