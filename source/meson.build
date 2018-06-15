@@ -5,7 +5,9 @@ inc = include_directories('.')
 hidapid_sources = [
     'hidapi/bindings.d',
     'hidapi/device.d',
-    'hidapi/error.d'
+    'hidapi/devicelist.d',
+    'hidapi/error.d',
+    'hidapi/hid.d'
 ]
 
 hidapid_lib = static_library('hidapid',

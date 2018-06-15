@@ -1,4 +1,4 @@
-project('hidapi-d', 'd',
+project('hidapi-d', 'd', 'c',
 			version: 'ALPHA-0',
 			license: 'AGPLv3')
 
@@ -11,13 +11,7 @@ hidapi_dep = dependency(hidapi)
 
 # Subdirectories
 subdir('source')
-
-# Test executables
-exe = executable('test-hidapi-rival310', 'example.d',
-					include_directories : inc,
-					link_with: hidapid_lib,
-					dependencies: hidapi_dep)
-test('hidapi-rival310', exe)
+subdir('tests')
 
 # Generate dub.json
 has_dub_module = false
