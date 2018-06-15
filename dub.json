@@ -9,7 +9,9 @@
     "sourceFiles": [
         "source/hidapi/bindings.d",
         "source/hidapi/device.d",
-        "source/hidapi/error.d"
+        "source/hidapi/devicelist.d",
+        "source/hidapi/error.d",
+        "source/hidapi/hid.d"
     ],
     "libs": [
         "hidapi-libusb"
