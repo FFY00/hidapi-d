@@ -13,8 +13,8 @@ void main()
 	writeln("Manufacturer: ", dev.getManufacturer());
 	writeln("Product: ", dev.getProduct());
 	writeln("Serial Number: ", dev.getSerialNumber());
-	writeln("Indexed String #4:", dev.getIndexedString(4));
-	writeln("Indexed String #5:", dev.getIndexedString(5));
+	writeln("Indexed String #4: ", dev.getIndexedString(4));
+	writeln("Indexed String #5: ", dev.getIndexedString(5));
 	writeln("Feature Report: ", dev.getFeatureReport(255));
 
 	// Run a command

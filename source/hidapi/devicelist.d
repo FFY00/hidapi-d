@@ -47,7 +47,7 @@ class DeviceList : Hid
                 break;
         }
 
-        hid_free_enumeration(devs);
+        //hid_free_enumeration(devs);
 
         return result;
     }

@@ -14,7 +14,7 @@ subdir('source')
 subdir('tests')
 
 # Generate dub.json
-has_dub_module = true
+has_dub_module = false
 if has_dub_module
 	dub_sources = []
 	foreach path : hidapid_sources

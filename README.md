@@ -21,8 +21,8 @@ auto dev = new Device(0x1038, 0x1720); // vendor_id, product_id
 writeln("Manufacturer: ", dev.getManufacturer());
 writeln("Product: ", dev.getProduct());
 writeln("Serial Number: ", dev.getSerialNumber());
-writeln("Indexed String #4:", dev.getIndexedString(4));
-writeln("Indexed String #5:", dev.getIndexedString(5));
+writeln("Indexed String #4: ", dev.getIndexedString(4));
+writeln("Indexed String #5: ", dev.getIndexedString(5));
 writeln("Feature Report: ", dev.getFeatureReport(255));
 
 // Run a command
@@ -44,8 +44,8 @@ foreach(devv; new DeviceList(0x1038, 0x1720))
 Manufacturer: SteelSeries
 Product: SteelSeries Rival 310 eSports Mouse
 Serial Number: 000000000000
-Indexed String #4:SteelSeries Config
-Indexed String #5:SteelSeries Consumer
+Indexed String #4: SteelSeries Config
+Indexed String #5: SteelSeries Consumer
 Feature Report: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 Command 0x90: [33, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 Serial: 55820C7AF180
