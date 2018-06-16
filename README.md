@@ -14,7 +14,7 @@ This is a simple example using `hidapi-d` to interface with my Steelseries Rival
 
 ##### Code
 ```D
-// Open first matching device
+// Open the first matching device
 auto dev = new Device(0x1038, 0x1720); // vendor_id, product_id
 
 // Print info

@@ -6,7 +6,7 @@ import std.stdio;
 
 void main()
 {
-	// Open first matching device
+	// Open the first matching device
 	auto dev = new Device(0x1038, 0x1720); // vendor_id, product_id
 
 	// Print info
@@ -17,7 +17,7 @@ void main()
 	writeln("Indexed String #5: ", dev.getIndexedString(5));
 	writeln("Feature Report: ", dev.getFeatureReport(255));
 
-	// Run a command
+	// Execute a command
 	// Sends a buffer to the device and reads the response
 	const uint size = 64;
 	ubyte[] buf = new ubyte[size];

@@ -1,6 +1,6 @@
 project('hidapi-d', 'd', 'c',
-			version: 'ALPHA-0',
-			license: 'AGPLv3')
+			version: '1.0.2',
+			license: 'MIT')
 
 # Find HIDAPI
 hidapi = 'hidapi'
@@ -26,7 +26,7 @@ if has_dub_module
 							authors: 'Filipe Laíns',
 							description: 'D bindings for HIDAPI',
 							copyright: 'Copyright © 2018, Filipe Laíns',
-							license: 'AGPLv3',
+							license: 'MIT',
 							sourceFiles: dub_sources,
 							libs: hidapi
 	)
