@@ -24,7 +24,8 @@ class Hid
      */
     shared static ~this()
     {
-        int ret = hid_exit();
+        //int ret = hid_exit(); // is generating an error on linux
+        int ret = 0;
         enforce!HidError(ret != -1, "Failed to exit HIDAPI");
     }
 

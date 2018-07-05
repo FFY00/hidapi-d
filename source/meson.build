@@ -15,3 +15,5 @@ hidapid_lib = static_library('hidapid',
                                 include_directories: inc,
                                 dependencies: hidapi_dep,
                                 install : true)
+
+install_headers(hidapid_sources, subdir: 'hidapid/hidapi') # meson doesn't preserve the path for some reason

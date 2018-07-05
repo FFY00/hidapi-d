@@ -25,7 +25,7 @@ writeln("Indexed String #4: ", dev.getIndexedString(4));
 writeln("Indexed String #5: ", dev.getIndexedString(5));
 writeln("Feature Report: ", dev.getFeatureReport(255));
 
-// Run a command
+// Execute a command
 // Sends a buffer to the device and reads the response
 const uint size = 64;
 ubyte[] buf = new ubyte[size];
