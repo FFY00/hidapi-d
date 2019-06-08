@@ -13,7 +13,7 @@
         "source/hidapi/error.d",
         "source/hidapi/hid.d"
     ],
-    "libs": [
+    "libs-posix": [
         "hidapi-libusb"
     ]
 }
