@@ -205,8 +205,7 @@ int hid_write (hid_device* device, const(ubyte)* data, size_t length);
 
 			@returns
 				This function returns the actual number of bytes read and
-				-1 on error. If no packet was available to be read within
-				the timeout period, this function returns 0.
+				-1 on error.
 		*/
 int hid_read_timeout (hid_device* dev, ubyte* data, size_t length, int milliseconds);
 
@@ -225,8 +224,7 @@ int hid_read_timeout (hid_device* dev, ubyte* data, size_t length, int milliseco
 
 			@returns
 				This function returns the actual number of bytes read and
-				-1 on error. If no packet was available to be read and
-				the handle is in non-blocking mode, this function returns 0.
+				-1 on error.
 		*/
 int hid_read (hid_device* device, ubyte* data, size_t length);
 
@@ -280,26 +278,22 @@ int hid_send_feature_report (hid_device* device, const(ubyte)* data, size_t leng
 
 /** @brief Get a feature report from a HID device.
 
-			Set the first byte of @p data[] to the Report ID of the
-			report to be read.  Make sure to allow space for this
-			extra byte in @p data[]. Upon return, the first byte will
-			still contain the Report ID, and the report data will
-			start in data[1].
+			Make sure to set the first byte of @p data[] to the Report
+			ID of the report to be read.  Make sure to allow space for
+			this extra byte in @p data[].
 
 			@ingroup API
 			@param device A device handle returned from hid_open().
 			@param data A buffer to put the read data into, including
 				the Report ID. Set the first byte of @p data[] to the
-				Report ID of the report to be read, or set it to zero
-				if your device does not use numbered reports.
+				Report ID of the report to be read.
 			@param length The number of bytes to read, including an
 				extra byte for the report ID. The buffer can be longer
 				than the actual report.
 
 			@returns
-				This function returns the number of bytes read plus
-				one for the report ID (which is still in the first
-				byte), or -1 on error.
+				This function returns the number of bytes read and
+				-1 on error.
 		*/
 int hid_get_feature_report (hid_device* device, ubyte* data, size_t length);
 
